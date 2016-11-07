@@ -1,0 +1,137 @@
+#INDEX
+txt_header_button=PUBLICA EL TEU ANUNCI
+
+txt_index_title=Llogar autocaravana entre particular - Piulet
+txt_index_description=El primer portal de lloguer d'autocaravanes entre particulars amb totes les garanties. Disfruta d'una autocaravana al millor preu, de particular a particular.
+txt_index_h1=Experiències inoblidables!
+txt_index_h2=Lloguer d'autocaravanes entre particulars. Vols ser el primer a descubrir-ho?
+txt_index_form_option1=Llogar autocaravana
+txt_index_form_option2=Propietari autocaravana
+txt_index_form_submit_button=Avisa'm
+txt_index_form_search_button=Cercar
+txt_index_form_submitted_ok=Benvingut a l'aventura! Molt aviat ens posarem en contacte amb tu.
+txt_index_share_twitter=Vull llogar una autocaravana a Piulet #socialCaravan, entre particulars. I tu?
+txt_index_footer_option1=Llogar autocaravana
+txt_index_footer_option2=Llogar caravana
+txt_index_footer_option3=Llogar mobil home
+txt_index_footer_option4=Afegeix la teva autocaravana
+txt_index_footer_contact=Més informació
+
+#INDEX_CAR
+txt_index_car_title=Llogar caravana entre particular - Piulet
+txt_index_car_description=El primer portal de lloguer de caravanes entre particulars amb totes les garanties. Disfruta d'una caravana al millor preu, de particular a particular.
+txt_index_car_h2=Lloguer de caravanes entre particulars. Vols ser el primer a descubrir-ho?
+txt_index_car_form_option1=Llogar caravana
+txt_index_car_form_option2=Propietari caravana
+txt_index_car_share_twitter=Vull llogar una autocaravana a Piulet #socialCaravan, entre particulars. I tu?
+txt_index_car_footer_option4=Afegeix la teva caravana
+
+#INDEX_MH
+txt_index_mh_title=Llogar mobil home entre particular - Piulet
+txt_index_mh_description=El primer portal de lloguer de mobil homes entre particulars amb totes les garanties. Disfruta d'un mobile home al millor preu, de particular a particular.
+txt_index_mh_h2=Lloguer de mobile homes entre particulars. Vols ser el primer a descubrir-ho?
+txt_index_mh_form_option1=Llogar MH
+txt_index_mh_form_option2=Propietari MH
+txt_index_mh_share_twitter=Vull llogar un mobil home a Piulet #socialCaravan, entre particulars. I tu?
+txt_index_mh_footer_option4=Afegeix el teu MH
+
+#LIST
+txt_list_results=Resultats
+txt_list_places=Places
+txt_list_price_range=Rang de preu
+txt_list_search=Busca
+
+#FORMOWNER
+txt_formowner_titulo_caravana=Informació
+txt_formowner_tipo=Tipus *
+txt_formowner_marca=Marca *
+txt_formowner_modelo=Model
+txt_formowner_precio=Preu *
+txt_formowner_temporadaalta=Temporada alta
+txt_formowner_temporadabaja=Temporada baixa
+txt_formowner_precioentre=Preu entre setmana
+txt_formowner_preciofinde=Preu cap de setmana
+txt_formowner_dataini=Data inici
+txt_formowner_datafi=Data fi
+txt_formowner_caracteristicas=Característiques
+txt_formowner_fotos=Fotos
+txt_formowner_detalls=Detalls
+txt_formowner_ubicacion=Ubicació
+txt_formowner_pais=Pais *
+txt_formowner_provincia=Estat / Província *
+txt_formowner_ciudad=Ciutat *
+txt_formowner_direccion=Direcció *
+txt_formowner_plazasdia=Places dia
+txt_formowner_plazasnoche=Places nit
+txt_formowner_combustible=Combustible
+txt_formowner_marchas=Marxes
+txt_formowner_numairbags=Num airbags
+txt_formowner_abs=Abs
+txt_formowner_gps=Gps
+txt_formowner_cocina=Cuina
+txt_formowner_ducha=Dutxa
+txt_formowner_cale=Calefacció
+txt_formowner_radio=Radio
+txt_formowner_tele=Televisió
+txt_formowner_aire=Aire Condicionat
+txt_formowner_microondas=Microones
+txt_formowner_nevera=Nevera
+txt_formowner_mosqui=Mosquiteres
+txt_formowner_desc=Descripció
+txt_formowner_foto1=Foto 1 *
+txt_formowner_foto2=Foto 2 *
+txt_formowner_foto3=Foto 3 *
+txt_formowner_foto4=Foto 4
+txt_formowner_foto5=Foto 5
+txt_formowner_titulo_usuario=Usuari
+txt_formowner_nombre=Nom *
+txt_formowner_apellido=Cognom *
+txt_formowner_telf=Telefon
+txt_formowner_mail=E-mail *
+txt_formowner_codigopostal=Codi postal
+txt_formowner_validar=Desa i Continua
+
+#REGISTRAR
+Et recomanem publicar els anuncis aquí :
+txt_register_titulo_ads=Si ens autoritzes, publicarem automàticament els anuncis en aquests portals, per així aconseguir més reserves
+txt_register_ads_continuar=Continuar
+
+txt_register_xs_gracies=Gràcies per confiar en nosaltres.
+txt_register_xs_millor=La millor manera de donar a coneixer la teva ofera, és compartir a les xarxes socials
+txt_register_xs_boto_si=Compartir a facebook
+txt_register_xs_boto_no=No compartir
+txt_register_modelo=Model: 
+txt_register_marca=Marca: 
+
+#PROFILECARAVAN
+txt_profilecaravan_dataini=Data inici *
+txt_profilecaravan_datafi=Data fi *
+txt_profilecaravan_button=Llogar
+txt_profilecaravan_desde=Desde
+txt_profilecaravan_yes=Si
+txt_profilecaravan_no=No
+txt_profilecaravan_pais=Pais
+txt_profilecaravan_provincia=Provincia
+txt_profilecaravan_ciudad=Ciutat
+txt_profilecaravan_direccion=Direcció
+txt_profilecaravan_preu= /dia
+
+txt_profilecaravan_tempAlta=Temporada alta
+txt_profilecaravan_tempBaixa=Temporada baixa
+txt_profilecaravan_temp=Preus Temporada
+txt_profilecaravan_setmana=setmana
+txt_profilecaravan_fiSetmana=cap de setmana
+txt_profilecaravan_en=en
+txt_profilecaravan_total=Total price: €
+txt_profilecaravan_fins=fins
+
+txt_rent_lloga=Hem rebut la seva reserva
+txt_rent_comiat=En breu ens posarem en contacte amb voste
+txt_rent_total=Preu total €
+
+#LINKS
+lnk_rent_autocaravan=lloga-autocaravana
+lnk_rent_caravan=lloga-caravana
+lnk_rent_mobile-home=lloga-mobile-home
+lnk_list=llistat
+lnk_profile=perfil

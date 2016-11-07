@@ -1,0 +1,137 @@
+#INDEX
+txt_header_button=POST YOUR AD
+
+txt_index_title=Motorhome rentals - Best price on Piulet
+txt_index_description=Rent your motorhome, peer to peer with all garanties. Get your motorhome at the best price!
+txt_index_h1=Unforgetable experiences
+txt_index_h2=Rent your motorhome from people to all over the world. Be the first to discover us!
+txt_index_form_option1=Rent motorhome
+txt_index_form_option2=Own motorhome
+txt_index_form_submit_button=Notify Me
+txt_index_form_search_button=Search
+txt_index_form_submitted_ok=Welcome to this magical adventure! We'll get in touch very soon.
+txt_index_share_twitter=I’ve registered to rent a motorhome with #socialCaravan, do you?
+txt_index_footer_option1=Rent motorhome
+txt_index_footer_option2=Rent caravan
+txt_index_footer_option3=Rent mobile home
+txt_index_footer_option4=Add your motorhome
+txt_index_footer_contact=More info
+
+#INDEX_CAR
+txt_index_car_title=Caravan rentals - Best price on Piulet
+txt_index_car_description=Rent your caravan, peer to peer with all garanties. Get your caravan at the best price!
+txt_index_car_h2=Rent your caravan from people to all over the world. Be the first to discover us!
+txt_index_car_form_option1=Rent caravan
+txt_index_car_form_option2=Own caravan
+txt_index_car_share_twitter=I’ve registered to rent a caravan with Piulet #socialCaravan, do you?
+txt_index_car_footer_option4=Add your caravan
+
+#INDEX_MH
+txt_index_mh_title=Mobilhome rentals - Best price on Piulet
+txt_index_mh_description=Rent your mobile home, peer to peer with all garanties. Get your mobilhome at the best price!
+txt_index_mh_h2=Rent your mobile home, peer to peer with all garanties. Get your mobile home at the best price!
+txt_index_mh_form_option1=Rent mobile home
+txt_index_mh_form_option2=Own mobile home
+txt_index_mh_share_twitter=I’ve registered to rent a mobile home with Piulet #socialCaravan, do you?
+txt_index_mh_footer_option4=Add your mobile home
+
+#LIST
+txt_list_results=Results
+txt_list_places=Places
+txt_list_price_range=Price range
+txt_list_search=Search
+
+#FORMOWNER
+txt_formowner_titulo_caravana=Information
+txt_formowner_tipo=Type *
+txt_formowner_marca=Make *
+txt_formowner_modelo=Model
+txt_formowner_precio=Price *
+txt_formowner_temporadaalta=High season
+txt_formowner_temporadabaja=Low season
+txt_formowner_precioentre=Week price
+txt_formowner_preciofinde=Weekend price
+txt_formowner_dataini=Start
+txt_formowner_datafi=Finish
+txt_formowner_ubicacion=Product location
+txt_formowner_pais=Country *
+txt_formowner_provincia=State / Province *
+txt_formowner_ciudad=City *
+txt_formowner_direccion=Address *
+txt_formowner_caracteristicas=Features
+txt_formowner_fotos=Photos
+txt_formowner_detalls=Details
+txt_formowner_plazasdia=Places at day
+txt_formowner_plazasnoche=Places at night
+txt_formowner_combustible=Fuel
+txt_formowner_marchas=Gears
+txt_formowner_numairbags=Number airbags
+txt_formowner_abs=Abs
+txt_formowner_gps=Gps
+txt_formowner_cocina=Kitchen
+txt_formowner_ducha=Shower
+txt_formowner_cale=Heating
+txt_formowner_radio=Radio
+txt_formowner_tele=Tv 
+txt_formowner_aire=Air Conditioning
+txt_formowner_microondas=Microwave
+txt_formowner_nevera=Fridge
+txt_formowner_mosqui=Flyscreen
+txt_formowner_desc=Description
+txt_formowner_foto1=Photo 1 *
+txt_formowner_foto2=Photo 2 *
+txt_formowner_foto3=Photo 3 *
+txt_formowner_foto4=Photo 4
+txt_formowner_foto5=Photo 5
+txt_formowner_titulo_usuario=User
+txt_formowner_nombre=Name *
+txt_formowner_apellido=Last name *
+txt_formowner_telf=Phone number
+txt_formowner_mail=E-mail *
+txt_formowner_codigopostal=Zip code
+txt_formowner_validar=Save and continue
+
+#REGISTRAR
+We recommend running your ads here :
+txt_register_titulo_ads=If you authorize us, to automatically post ads on these sites, so get more bookings
+txt_register_ads_continuar=Continue
+
+txt_register_xs_gracies=Thank you for trusting us.
+txt_register_xs_millor=The best way to present your offer to share on social networks
+txt_register_xs_boto_si=Share to facebook
+txt_register_xs_boto_no=No share
+txt_register_modelo=Model: 
+txt_register_marca=Make: 
+
+#PROFILECARAVAN
+txt_profilecaravan_dataini=Data inici *
+txt_profilecaravan_datafi=Data fi *
+txt_profilecaravan_button=Rent
+txt_profilecaravan_desde=From
+txt_profilecaravan_yes=Yes
+txt_profilecaravan_no=No
+txt_profilecaravan_pais=Country
+txt_profilecaravan_provincia=State / Province
+txt_profilecaravan_ciudad=City
+txt_profilecaravan_direccion=Address
+txt_profilecaravan_preu= /day
+
+txt_profilecaravan_tempAlta=High season
+txt_profilecaravan_tempBaixa=Low season
+txt_profilecaravan_temp=Season Prices
+txt_profilecaravan_setmana=Week
+txt_profilecaravan_fiSetmana=Weekend
+txt_profilecaravan_en=in
+txt_profilecaravan_total=Total price: €
+txt_profilecaravan_fins=to
+
+txt_rent_lloga=We have received your booking
+txt_rent_comiat=We will contact you
+txt_rent_total=Total price €
+
+#LINKS
+lnk_rent_autocaravan=rent-autocaravan
+lnk_rent_caravan=rent-caravan
+lnk_rent_mobile-home=rent-mobile-home
+lnk_list=list
+lnk_profile=profile

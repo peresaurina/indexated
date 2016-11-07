@@ -1,0 +1,138 @@
+#INDEX
+txt_header_button=Diffusez votre annonce
+
+txt_index_title=Location camping-car privé - Piulet
+txt_index_description=Louez votre camping-car au meilleur prix et avec un maximum de sécurité. Des propriétaires, louez votre camping-car pour vos vacances.
+txt_index_h1=Vivez des expériences inoubliables!
+txt_index_h2=Motorhome Hire entre les individus. Soyez le premier à le découvrir?
+txt_index_form_option1=Motorhome Hire
+txt_index_form_option2=Propriétaire camping-car
+txt_index_form_submit_button=Alertez-moi
+txt_index_form_submitted_ok=Bienvenue dans cette aventure magique! Très bientôt, nous vous contacterons.
+txt_index_share_twitter=Je veux louer un camping-car en Piulet #socialCaravan, entre les individus. Je vous?
+txt_index_footer_option1=Location camping-car
+txt_index_footer_option2=Location caravane
+txt_index_footer_option3=Location de mobil-home
+txt_index_footer_option4=Ajouter camping-car
+txt_index_footer_contact=Plus d'info
+
+#INDEX_CAR
+txt_index_car_title=Location caravane privée - Piulet
+txt_index_car_description=Louez votre caravane au meilleur prix et avec un maximum de sécurité. Par les propriétaires, la location de vacances pour votre caravane.
+txt_index_car_h2=Location des caravanes entre les individus. Vous voulez être le premier à le savoir?
+txt_index_car_form_option1=Location caravane
+txt_index_car_form_option2=Propriétaire caravane
+txt_index_car_share_twitter=Je veux louer une caravane dans Piulet #socialCaravan, entre les individus. Je vous?
+txt_index_car_footer_option4=Ajouter caravane
+
+
+#INDEX_MH
+txt_index_mh_title=Location mobil-home privé - Piulet
+txt_index_mh_description=Louez votre mobil-home au meilleur prix et avec un maximum de sécurité. Des propriétaires, louez votre camping-car pour vos vacances.
+txt_index_mh_h2=Location de mobil-home entre les individus. Vous voulez être le premier à le savoir?
+txt_index_mh_form_option1=Location MH
+txt_index_mh_form_option2=Propriétaire MH
+txt_index_mh_share_twitter=Je veux louer un mobil-home en Piulet #socialCaravan, entre les individus. Je vous?
+txt_index_mh_footer_option4=Ajouter MH
+
+#LIST
+txt_list_results=Résultats
+txt_list_places=Places
+txt_list_price_range=Price range
+txt_list_search=Search
+
+#FORMOWNER
+txt_formowner_titulo_caravana=Informations
+txt_formowner_tipo=Catégorie *
+txt_formowner_marca=Marque *
+txt_formowner_modelo=Modèle
+txt_formowner_precio=Prix *
+txt_formowner_temporadaalta=Pleine saison
+txt_formowner_temporadabaja=Diminuer saison
+txt_formowner_precioentre=Prix ​​semaine
+txt_formowner_preciofinde=Week-end Prix
+txt_formowner_dataini=Début des données
+txt_formowner_datafi=Les données ainsi
+txt_formowner_caracteristicas=Traits
+txt_formowner_fotos=Photos
+txt_formowner_detalls=Détails
+txt_formowner_ubicacion=Emplacement
+txt_formowner_pais=Pays *
+txt_formowner_provincia=État / Province *
+txt_formowner_ciudad=Ville *
+txt_formowner_direccion=adresse *
+txt_formowner_plazasdia=Jour Personnes
+txt_formowner_plazasnoche=Nuit Personnes
+txt_formowner_combustible=Carburant
+txt_formowner_marchas=Engrenage
+txt_formowner_numairbags=Nombre airbags
+txt_formowner_abs=Abs
+txt_formowner_gps=Gps
+txt_formowner_cocina=Cuisine
+txt_formowner_ducha=Douche
+txt_formowner_cale=Chauffage
+txt_formowner_radio=Radio
+txt_formowner_tele=TV
+txt_formowner_aire=Climatisation
+txt_formowner_microondas=Micro-ondes
+txt_formowner_nevera=Frigo
+txt_formowner_mosqui=Moustiquaires
+txt_formowner_desc=Description
+txt_formowner_foto1=Photo 1 *
+txt_formowner_foto2=Photo 2 *
+txt_formowner_foto3=Photo 3 *
+txt_formowner_foto4=Photo 4
+txt_formowner_foto5=Photo 5
+txt_formowner_titulo_usuario=Usager
+txt_formowner_nombre=Nom *
+txt_formowner_apellido=nom de famille *
+txt_formowner_telf=Téléphone
+txt_formowner_mail=E-mail *
+txt_formowner_codigopostal=Code postal
+txt_formowner_validar=Enregistrer et continuer
+
+#REGISTRAR
+Nous recommandons annonces ici:
+txt_register_titulo_ads=Si vous nous autorisez à publier automatiquement des annonces sur les sites, afin d'obtenir plus de réservations
+txt_register_ads_continuar=continuer
+
+txt_register_xs_gracies=Nous vous remercions de nous avoir fait confiance.
+txt_register_xs_millor=La meilleure façon de présenter votre offre, le partager sur les réseaux sociaux
+txt_register_xs_boto_si=Part facebook
+txt_register_xs_boto_no=Ne partagez pas
+txt_register_modelo=Modèle: 
+txt_register_marca=Marque: 
+
+
+#PROFILECARAVAN
+txt_profilecaravan_dataini=Date initiale *
+txt_profilecaravan_datafi=Date fin *
+txt_profilecaravan_button=Louer
+txt_profilecaravan_desde=à partir de
+txt_profilecaravan_yes=Si
+txt_profilecaravan_no=No
+txt_profilecaravan_pais=Pays
+txt_profilecaravan_provincia=Province
+txt_profilecaravan_ciudad=Ville
+txt_profilecaravan_direccion=Adresse
+txt_profilecaravan_preu= /jour
+
+txt_profilecaravan_tempAlta=Haute saison
+txt_profilecaravan_tempBaixa=Basse saison
+txt_profilecaravan_temp=Saison Prix
+txt_profilecaravan_setmana=Semaine
+txt_profilecaravan_fiSetmana=Weekend
+txt_profilecaravan_en=en
+txt_profilecaravan_total=Prix total €
+txt_profilecaravan_fins=à
+
+txt_rent_lloga=Nous avons reçu votre réservation
+txt_rent_comiat=Nous vous contacterons
+txt_rent_total=Prix total €
+
+#LINKS
+lnk_rent_autocaravan=alquila-autocaravana
+lnk_rent_caravan=alquila-caravana
+lnk_rent_mobile-home=alquila-mobile-home
+lnk_list=list
+lnk_profile=profile

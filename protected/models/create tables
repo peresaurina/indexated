@@ -1,0 +1,115 @@
+    
+    CREATE TABLE tbl_user(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(50),
+            lastname VARCHAR(50),
+            dateini DATETIME,
+            dateend DATETIME,
+            idrent INT NOT NULL,
+            email VARCHAR(50),
+            created_at DATETIME,
+            updated_at DATETIME
+            );
+    
+    CREATE TABLE tbl_owner(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(50),
+            lastname VARCHAR(50),
+            dni VARCHAR(10),
+            zipCode VARCHAR(7),
+            country VARCHAR(50),
+            region VARCHAR(50),
+            city VARCHAR(50),
+            street VARCHAR(50),
+            telf VARCHAR(15),
+            email VARCHAR(50),
+            whatsapp TINYINT(1) NOT NULL,
+            line TINYINT(1) NOT NULL,
+            created_at DATETIME,
+            updated_at DATETIME
+            );
+    
+     CREATE TABLE tbl_caravan(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            ownerid INT NOT NULL,
+            types VARCHAR(50),
+            make VARCHAR(50),
+            model VARCHAR(50),
+            country VARCHAR(50),
+            region VARCHAR(50),
+            city VARCHAR(50),
+            lat FLOAT,
+            lon FLOAT,
+            price INT,
+            street VARCHAR(50),
+            description VARCHAR(255),
+            placesatday TINYINT(3),
+            placesatnight TINYINT(3),
+            fuel VARCHAR(50),
+            gears VARCHAR(50),
+            numairbag TINYINT(1),
+            abs TINYINT(1) NOT NULL,
+            gps TINYINT(1) NOT NULL,
+            kitchen TINYINT(1) NOT NULL,
+            shower TINYINT(1) NOT NULL,
+            heating TINYINT(1) NOT NULL,
+            radio TINYINT(1) NOT NULL,
+            tv TINYINT(1) NOT NULL,
+            aircondicioner TINYINT(1) NOT NULL,
+            microwave TINYINT(1) NOT NULL,
+            fridge TINYINT(1) NOT NULL,
+            flyscreen TINYINT(1) NOT NULL,
+            created_at DATETIME,
+            updated_at DATETIME
+           
+            );
+
+
+
+       CREATE TABLE tbl_image(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            caravanid INT NOT NULL,
+            created_at DATETIME,
+            updated_at DATETIME
+            );
+
+
+      CREATE TABLE tbl_available(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            ownerid INT NOT NULL,
+            caravanid INT NOT NULL,
+            dateini DATETIME,
+            dateend DATETIME,
+            created_at DATETIME,
+            updated_at DATETIME
+            );
+
+
+    CREATE TABLE tbl_season(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            caravanid INT,
+            starthigh DATE,
+            finishigh DATE,
+            pricehighweek INT,
+            pricehighweekend INT,
+            startlow DATE,
+            finishlow DATE,
+            pricelowweek INT,
+            pricelowweekend INT,
+            created_at DATETIME,
+            updated_at DATETIME
+            );
+
+        CREATE TABLE tbl_ads(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            caravanid INT NOT NULL,
+            segundamano TINYINT(1) NOT NULL,
+            milanuncios TINYINT(1) NOT NULL,
+            oxl TINYINT(1) NOT NULL,
+            yaencontre TINYINT(1) NOT NULL,
+            created_at DATETIME,
+            updated_at DATETIME
+            );
+
+
+

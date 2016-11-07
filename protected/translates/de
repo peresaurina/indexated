@@ -1,0 +1,139 @@
+#INDEX
+txt_header_button=Posten Sie Ihre Anzeige
+
+txt_index_title=Wohnmobil mieten - Best Preis auf Piulet
+txt_index_description=Mieten Sie Ihr Wohnmobil, Peer-to-mit allen Garantien zu spähen. Holen Sie Ihr Reisemobil zum besten Preis!
+txt_index_h1=Unvergessliche Erlebnisse
+txt_index_h2=Mieten Sie Ihr Wohnmobil von Menschen auf der ganzen Welt. Seien Sie der Erste, der uns zu entdecken!
+txt_index_form_option1=Miete Wohnmobil
+txt_index_form_option2=Eigenen Wohnmobil
+txt_index_form_submit_button=Bitte, benachrichtigen
+txt_index_form_submitted_ok=Willkommen in dieser magischen Abenteuer! Wir bleiben in Kontakt sehr bald bekommen.
+txt_index_share_twitter=Ich habe mich registriert, um ein Wohnmobil mit # socialCaravan mieten, nicht wahr?
+txt_index_footer_option1=Miete Wohnmobil
+txt_index_footer_option2=Mietwohnwagen
+txt_index_footer_option3=Mieten mobile home
+txt_index_footer_option4=Fügen Sie Ihre Wohnmobil
+txt_index_footer_contact=Mehr info
+
+#INDEX_CAR
+txt_index_car_title=Caravan mieten - Best Preis auf Piulet
+txt_index_car_description=Mieten Sie Ihren Wohnwagen, Peer-to-mit allen Garantien zu spähen. Holen Sie Ihren Wohnwagen zum besten Preis!
+txt_index_car_h2=Mieten Sie Ihren Wohnwagen von Menschen auf der ganzen Welt. Seien Sie der Erste, der uns zu entdecken!
+txt_index_car_form_option1=Mietwohnwagen
+txt_index_car_form_option2=Eigenen Wohnwagen
+txt_index_car_share_twitter=Ich habe mich registriert, um einen Wohnwagen mit Piulet # socialCaravan mieten, nicht wahr?
+txt_index_car_footer_option4=Fügen Sie Ihren Wohnwagen
+
+#INDEX_MH
+txt_index_mh_title=Mobilhome mieten - Best Preis auf Piulet
+txt_index_mh_description=Mieten Sie Ihr Mobilheim, Peer-to-mit allen Garantien zu spähen. Holen Sie sich Ihre mobile home zum besten Preis!
+txt_index_mh_h2=Mieten Sie Ihr Wohnmobil von Menschen auf der ganzen Welt. Seien Sie der Erste, der uns zu entdecken!
+txt_index_mh_form_option1=Mieten mobile home
+txt_index_mh_form_option2=Eigenes Mobilheim
+txt_index_mh_share_twitter=Ich habe mich registriert, ein Mobilheim mit Piulet # socialCaravan mieten, nicht wahr?
+txt_index_mh_footer_option4=Fügen Sie Ihre mobile home
+
+#LIST
+txt_list_results=Ergebnisse
+txt_list_places=Places
+txt_list_price_range=Price range
+txt_list_search=Search
+
+
+#FORMOWNER
+txt_formowner_titulo_caravana=Information
+txt_formowner_tipo=Typ *
+txt_formowner_marca=Machen *
+txt_formowner_modelo=Modell
+txt_formowner_precio=Preis *
+txt_formowner_temporadaalta=Hauptsaison
+txt_formowner_temporadabaja=Nebensaison
+txt_formowner_precioentre=Preis pro Woche
+txt_formowner_preciofinde=Wochenendpreis
+txt_formowner_dataini=Startdatum
+txt_formowner_datafi=Enddatum
+txt_formowner_caracteristicas=Features
+txt_formowner_fotos=Photos
+txt_formowner_detalls=Details
+txt_formowner_ubicacion=Lage
+txt_formowner_pais=Land *
+txt_formowner_provincia=Staat / Provinz *
+txt_formowner_ciudad=City *
+txt_formowner_direccion=Adresse *
+txt_formowner_plazasdia=Plazas Tag
+txt_formowner_plazasnoche=Plazas Nacht
+txt_formowner_combustible=Kraftstoff
+txt_formowner_marchas=Getriebe
+txt_formowner_numairbags=Anzahl Airbags
+txt_formowner_abs=Abs
+txt_formowner_gps=Gps
+txt_formowner_cocina=Küche
+txt_formowner_ducha=Dusche
+txt_formowner_cale=Heizung
+txt_formowner_radio=Radio
+txt_formowner_tele=Tv
+txt_formowner_aire=Klimaanlage
+txt_formowner_microondas=Mikrowellenofen
+txt_formowner_nevera=Kühlschrank
+txt_formowner_mosqui=Moskitonetze
+txt_formowner_desc=Description
+txt_formowner_foto1=Photo 1 *
+txt_formowner_foto2=Photo 2 *
+txt_formowner_foto3=Photo 3 *
+txt_formowner_foto4=Photo 4
+txt_formowner_foto5=Photo 5
+txt_formowner_titulo_usuario=Benutzer
+txt_formowner_nombre=Name *
+txt_formowner_apellido=Nachname *
+txt_formowner_telf=Telefonnummer
+txt_formowner_mail=E-mail *
+txt_formowner_codigopostal=Postleitzahl
+txt_formowner_validar=Speichern und weiter
+
+#REGISTRAR
+Wir empfehlen ads here:Wenn Sie uns nicht genehmigen, um automatisch veröffentlichen Anzeigen auf diesen Seiten, so dass man mehr Buchungen
+txt_register_titulo_ads=
+txt_register_ads_continuar=Fortsetzen
+
+txt_register_xs_gracies=Vielen Dank für Ihr Vertrauen.
+txt_register_xs_millor=Der beste Weg, um Ihr Angebot zu präsentieren, teilen Sie sie auf sozialen Netzwerken
+txt_register_xs_boto_si=Aktie facebook
+txt_register_xs_boto_no=nicht freigeben
+txt_register_modelo=Modell: 
+txt_register_marca=Marke: 
+
+
+
+#PROFILECARAVAN
+txt_profilecaravan_dataini=Anfangsdatum *
+txt_profilecaravan_datafi=Endtermin *
+txt_profilecaravan_button=Mieten
+txt_profilecaravan_desde=Von
+txt_profilecaravan_yes=Ja
+txt_profilecaravan_no=Nicht
+txt_profilecaravan_pais=Land
+txt_profilecaravan_provincia=Provinz
+txt_profilecaravan_ciudad=Stadt
+txt_profilecaravan_direccion=Adresse
+txt_profilecaravan_preu= /Tag
+
+txt_profilecaravan_tempAlta=Hauptsaison
+txt_profilecaravan_tempBaixa=Nebensaison
+txt_profilecaravan_temp=Saisonpreise
+txt_profilecaravan_setmana=Woche
+txt_profilecaravan_fiSetmana=Wochenende
+txt_profilecaravan_en=in
+txt_profilecaravan_total=Gesamtpreis: €
+txt_profilecaravan_fins=auf
+
+txt_rent_lloga=Wir haben Ihre Buchung erhalten
+txt_rent_comiat=Wir werden Sie kontaktieren
+txt_rent_total=Gesamtpreis €
+
+#LINKS
+lnk_rent_autocaravan=rent-autocaravan
+lnk_rent_caravan=rent-caravan
+lnk_rent_mobile-home=rent-mobile-home
+lnk_list=list
+lnk_profile=profile
