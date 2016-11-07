@@ -1,36 +1,48 @@
 <?php
 
 include ('../lib/funcions_generals.php');
-//include ('../protected/models/Mail_Europ.php');
-//include ('../protected/config/main.php');
-// localhost/panell/mailing/read_doc.php
-//set_time_limit(300);
-//$emails[] = null;
-/*
-$directorio = opendir("rebuts/"); //ruta actual
-while ($archiu = readdir($directorio)) { //obtenemos un archivo y luego otro sucesivamente
-    if (is_dir($archiu)) {//verificamos si es o no un directorio
-        echo "[" . $archiu . "]<br />"; //de ser un directorio lo envolvemos entre corchetes
-    } else {
- */       
-        //$archiu_contingut = file_get_contents("rebuts/" . $archiu); //Guardamos archivo.txt en $archivo
-        $arxiu_contingut = file_get_contents("http://matcarrelage.com/1_fr_0_sitemap.xml");
-        //print_r($arxiu_contingut);
-        //$z = new XMLReader();
-        //$z->open($file);
-        //$doc = new DOMDocument;
-        
-        
-        $xml = new SimpleXMLElement($arxiu_contingut);
-        foreach ($xml->url as $url_list) {
-            $url = $url_list->loc;
-            echo $url."<br>";
-        }
-        
-       
-        //un cop copiats tots els mails posem l'arxiu a processat
-        //rename("rebuts/" . $archiu, "processats/" . $archiu);
- 
+include("../google-url-master/autoload.php");
+
+
+$arxiu_contingut = file_get_contents("http://matcarrelage.com/1_fr_0_sitemap.xml");
+$xml = new SimpleXMLElement($arxiu_contingut);
+foreach ($xml->url as $url_list) {
+    $url = utf8_encode($url_list->loc);
+    echo $url . "<br>";
+
+    
+    $googleUrl = new GoogleUrl();
+    $googleUrl->setLang('es') // lang allows to adapt the query (tld, and google local params)
+            ->setNumberResults(10);                        // 10 results per page
+    //$acdcPage1 = $googleUrl->setPage(0)->search("acdc"); // acdc results page 1 (results 1-10)
+    //$acdcPage2 = $googleUrl->setPage(1)->search("acdc"); // acdc results page 2 (results 11-20)
+    //$url = "bascara";
+    $googleUrl->setNumberResults(5);
+    $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
+    //
+    //
+    print_r($simpsonPage1);
+    
+    // GET NATURAL RESULTS
+    $positions = $simpsonPage1->getPositions();
+
+    echo "results for " . $simpsonPage1->getKeywords();
+    echo "<ul>";
+    foreach ($positions as $result) {
+        echo "<li>";
+        echo "<ul>";
+        echo "<li>position : " . $result->getPosition() . "</li>";
+        echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
+        echo "<li>website : " . $result->getWebsite() . "</li>";
+        echo "<li>URL : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
+        echo "</ul>";
+        echo "</li>";
+    }
+    echo "</ul>";
+    exit;
+    sleep(30);
+}
+
 ?>
 
 
