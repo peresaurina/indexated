@@ -41,8 +41,9 @@ foreach ($xml->url as $url_list) {
         echo "</li>";
     }
     echo "</ul>";
-    exit;
-    sleep(30);
+    //exit;
+    sleep(10);
+    ini_set('max_execution_time', 30);
 }
 
 ?>
