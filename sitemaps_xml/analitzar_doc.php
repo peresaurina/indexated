@@ -36,7 +36,8 @@ foreach ($xml->url as $url_list) {
         echo "<li>website : " . $result->getWebsite() . "</li>";
         echo "<li>URL : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
         echo "<li>URL : <a href='" . $url . "'>" . $url . "</a></li>";
-        if ($url == $result->getUrl()) echo "<li>És la mateixa!!!!</li>";
+        if ($url == $result->getUrl()) echo "<li>Es la mateixa!!!!</li>";
+            else echo "<li>No indexada</li>";
         echo "</ul>";
         echo "</li>";
     }
