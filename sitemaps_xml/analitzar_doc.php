@@ -12,12 +12,13 @@ $i = 0;
 foreach ($xml->url as $url_list) {
 
     $url = utf8_encode($url_list->loc);
-
+    print_r($url);
+    
     if (!(Indexeds::existUrlDB($url))) {
         $googleUrl = new GoogleUrl();
         $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
-                ->setNumberResults(10);                        // 10 results per page
-        $googleUrl->setNumberResults(1);
+                ->setNumberResults(1);                        // 10 results per page
+        //$googleUrl->setNumberResults(1);
         $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
         // GET NATURAL RESULTS
         $positions = $simpsonPage1->getPositions();
