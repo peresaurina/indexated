@@ -43,7 +43,7 @@ foreach ($xml->url as $url_list) {
             sleep(10);
             ini_set('max_execution_time', 30);
             $i++;
-            if ($i == 5) exit ();
+            //if ($i == 5) exit ();
         }
     }else{
         echo "<ul><li>".$url." -> INDEXADA</li></ul>";
