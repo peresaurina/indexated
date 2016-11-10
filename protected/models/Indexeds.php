@@ -36,7 +36,7 @@ class Indexeds {
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
         $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
-        print_r($this);
+        //print_r($this);
     }
 
     //</editor-fold>
@@ -52,7 +52,7 @@ class Indexeds {
                 'createdAt = NOW()';
         $result = mysql_query($query);
         $this->id = (int) mysql_insert_id();
-        print_r($query);
+        //print_r($query);
         return $result;
     }
 

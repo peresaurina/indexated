@@ -5,7 +5,6 @@ include("../google-url-master/autoload.php");
 include("../protected/models/Indexeds.php");
 include("../protected/config/main.php");
 
-
 $arxiu_contingut = file_get_contents("http://matcarrelage.com/1_fr_0_sitemap.xml");
 $xml = new SimpleXMLElement($arxiu_contingut);
 $i = 0;
@@ -17,11 +16,11 @@ foreach ($xml->url as $url_list) {
         
         $googleUrl = new GoogleUrl();
         $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
-                ->setNumberResults(5);                        // 10 results per page
+                ->setNumberResults(10);                        // 5 results per page
         $googleUrl->setNumberResults(1);
         
-        print_r($googleUrl);        
         $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
+        
         echo "<br><br>";
         print_r($simpsonPage1);
         
