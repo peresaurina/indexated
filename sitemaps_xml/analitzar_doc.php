@@ -12,7 +12,8 @@ $i = 0;
 foreach ($xml->url as $url_list) {
 
     $url = utf8_encode($url_list->loc);
-    //print_r($url);
+    print_r($url);
+    print_r(Indexeds::existUrlDB($url));
     
     if (Indexeds::existUrlDB($url) == '0') {
         $googleUrl = new GoogleUrl();
