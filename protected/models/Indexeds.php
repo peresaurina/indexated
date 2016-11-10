@@ -11,6 +11,7 @@ class Indexeds {
     protected $id;
     protected $url;
     protected $google_index;
+    protected $google_url1;
     protected $createdAt;
 
     function __construct($id, $fields) {
@@ -34,6 +35,7 @@ class Indexeds {
     function __constructByFields($fields) {
         $this->id = isset($fields["id"]) ? (int) $fields["id"] : null;
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
+        $this->google_url1 = isset($fields["google_url1"]) ? $fields["google_url1"] : null;        
         $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
         //print_r($this);
@@ -49,6 +51,7 @@ class Indexeds {
         $query = 'INSERT INTO `indexeds` SET ' .
                 ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
                 ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
+                ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
                 'createdAt = NOW()';
         $result = mysql_query($query);
         $this->id = (int) mysql_insert_id();
@@ -110,6 +113,14 @@ class Indexeds {
     function setGoogle_index($google_index) {
         $this->google_index = $google_index;
     }
+    function getGoogle_url1() {
+        return $this->google_url1;
+    }
+
+    function setGoogle_url1($google_url1) {
+        $this->google_url1 = $google_url1;
+    }
+
 
 
 }

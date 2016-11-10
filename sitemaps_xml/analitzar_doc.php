@@ -44,12 +44,15 @@ foreach ($xml->url as $url_list) {
                 echo "<li>Es la mateixa Indexada!!!!</li>";
                 $pagina["url"] = $url;
                 $pagina["google_index"] = '1';
+                
+                
                 $pagina_indexada = new Indexeds(null, $pagina);
                 $pagina_indexada->insertIntoDataBase();
             } else {
                 $pagina["url"] = $url;
                 $pagina["google_index"] = '0';
-                $pagina_indexada = new Indexeds(null, $pagina);
+                $pagina["google_url1"] = $result->getUrl();
+                $pagina_indexada = new Indexeds(null, $pagina);               
                 //print_r($pagina_indexada);
                 $pagina_indexada->insertIntoDataBase();
                 echo "<li>No indexada</li>";
