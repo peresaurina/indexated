@@ -3,6 +3,7 @@
 include ('../lib/funcions_generals.php');
 include("../google-url-master/autoload.php");
 include("../protected/models/Indexeds.php");
+include("../protected/config/main.php");
 
 
 $arxiu_contingut = file_get_contents("http://matcarrelage.com/1_fr_0_sitemap.xml");
@@ -42,7 +43,7 @@ foreach ($xml->url as $url_list) {
             sleep(10);
             ini_set('max_execution_time', 30);
             $i++;
-            if ($i == 3) exit ();
+            if ($i == 5) exit ();
         }
     }
 }
