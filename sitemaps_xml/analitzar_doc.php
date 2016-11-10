@@ -12,19 +12,22 @@ $i = 0;
 foreach ($xml->url as $url_list) {
 
     $url = utf8_encode($url_list->loc);
-    print_r($url);
-    print_r(Indexeds::existUrlDB($url));
-    
+        
     if (Indexeds::existUrlDB($url) == '0') {
         echo "<br>Hem entrat";
         $googleUrl = new GoogleUrl();
         $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
                 ->setNumberResults(5);                        // 10 results per page
-        //$googleUrl->setNumberResults(1);
+        $googleUrl->setNumberResults(1);
+        
+        print_r($googleUrl);
+        
         $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
         // GET NATURAL RESULTS
         $positions = $simpsonPage1->getPositions();
+        
         print_r($positions);
+        
         foreach ($positions as $result) {
 
             echo "<ul>";
