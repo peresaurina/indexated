@@ -46,13 +46,14 @@ foreach ($xml->url as $url_list) {
             }
             echo "</ul>";
             $i++;
+            sleep(10);
             if ($i == 25)
                 exit();
         }
     }else {
         echo "<ul><li>" . $url . " -> Ja analitzada</li></ul>";
     }
-    sleep(10);
+    
     ini_set('max_execution_time', 30);
 }
 ?>

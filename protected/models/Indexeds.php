@@ -51,6 +51,7 @@ class Indexeds {
                 'createdAt = NOW()';
         $result = mysql_query($query);
         $this->id = (int) mysql_insert_id();
+        print_r($query);
         return $result;
     }
 
