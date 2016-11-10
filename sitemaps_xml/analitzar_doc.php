@@ -45,6 +45,8 @@ foreach ($xml->url as $url_list) {
             $i++;
             if ($i == 5) exit ();
         }
+    }else{
+        echo "<ul><li>".$url." -> INDEXADA</li></ul>";
     }
 }
 ?>
