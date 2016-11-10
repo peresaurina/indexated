@@ -7,7 +7,7 @@ include("../protected/models/Indexeds.php");
 
 $arxiu_contingut = file_get_contents("http://matcarrelage.com/1_fr_0_sitemap.xml");
 $xml = new SimpleXMLElement($arxiu_contingut);
-
+$i=0;
 foreach ($xml->url as $url_list) {
 
     $url = utf8_encode($url_list->loc);
@@ -43,6 +43,8 @@ foreach ($xml->url as $url_list) {
             //exit;
             sleep(10);
             ini_set('max_execution_time', 30);
+            $i++;
+            if ($i == 5) exit ();
         }
     }
 }
