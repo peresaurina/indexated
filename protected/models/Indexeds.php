@@ -48,7 +48,7 @@ class Indexeds {
     public function insertIntoDataBase() {
         $query = 'INSERT INTO `indexeds` SET ' .
                 ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
-                ($this->google_index != null ? 'url = "' . $this->google_index . '", ' : '') .
+                ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
                 'createdAt = NOW()';
         $result = mysql_query($query);
         $this->id = (int) mysql_insert_id();
