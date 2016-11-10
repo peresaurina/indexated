@@ -27,8 +27,8 @@ foreach ($xml->url as $url_list) {
             echo "<li>position : " . $result->getPosition() . "</li>";
             echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
             echo "<li>website : " . $result->getWebsite() . "</li>";
-            echo "<li>URL : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
-            echo "<li>URL : <a href='" . $url . "'>" . $url . "</a></li>";
+            echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
+            echo "<li>URL sitemap : <a href='" . $url . "'>" . $url . "</a></li>";
             if ($url == $result->getUrl()) {
                 echo "<li>Es la mateixa Indexada!!!!</li>";
                 $pagina["url"] = $url;
