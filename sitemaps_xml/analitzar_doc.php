@@ -16,6 +16,7 @@ foreach ($xml->url as $url_list) {
     print_r(Indexeds::existUrlDB($url));
     
     if (Indexeds::existUrlDB($url) == '0') {
+        echo "<br>Hem entrat";
         $googleUrl = new GoogleUrl();
         $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
                 ->setNumberResults(5);                        // 10 results per page
