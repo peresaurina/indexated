@@ -10,6 +10,7 @@ class Indexeds {
     //<editor-fold desc="ATTRIBUTES">
     protected $id;
     protected $url;
+    protected $google_index;
     protected $createdAt;
 
     function __construct($id, $fields) {
@@ -32,8 +33,9 @@ class Indexeds {
 
     function __constructByFields($fields) {
         $this->id = isset($fields["id"]) ? (int) $fields["id"] : null;
-        $this->url = isset($fields["url"]) ?  $fields["url"] : null;
-        $this->createdAt = isset($fields["createdAt"]) ?  $fields["createdAt"] : null;         
+        $this->url = isset($fields["url"]) ? $fields["url"] : null;
+        $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
+        $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
     }
 
     //</editor-fold>
@@ -42,37 +44,38 @@ class Indexeds {
      * Exists this owner in the Data base?
      * @return boolean
      */
-    
     public function insertIntoDataBase() {
         $query = 'INSERT INTO `indexeds` SET ' .
-                ($this->url != null ? 'url = "' . $this->url . '", ' : '') .                
+                ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
+                ($this->google_index != null ? 'url = "' . $this->google_index . '", ' : '') .
                 'createdAt = NOW()';
         $result = mysql_query($query);
         $this->id = (int) mysql_insert_id();
         return $result;
     }
-    
+
     public function existInDB($id) {
         $query = "SELECT * FROM `indexeds` WHERE id = '" . $id . "'";
         //echo "Claims.php : ".$query;
         $result = mysql_query($query);
-        if (mysql_num_rows($result)>0){
+        if (mysql_num_rows($result) > 0) {
             return "1";
-        }else{
+        } else {
             return "0";
         }
     }
-    
+
     public function existUrlDB($url) {
         $query = "SELECT * FROM `indexeds` WHERE url = '" . $url . "'";
         //echo "Claims.php : ".$query;
         $result = mysql_query($query);
-        if (mysql_num_rows($result)>0){
+        if (mysql_num_rows($result) > 0) {
             return "1";
-        }else{
+        } else {
             return "0";
         }
     }
+
     //</editor-fold>
     //<editor-fold desc="GETTERS & SETTERS">
     function getId() {
@@ -98,7 +101,13 @@ class Indexeds {
     function setCreatedAt($createdAt) {
         $this->createdAt = $createdAt;
     }
+    function getGoogle_index() {
+        return $this->google_index;
+    }
 
+    function setGoogle_index($google_index) {
+        $this->google_index = $google_index;
+    }
 
 
 }

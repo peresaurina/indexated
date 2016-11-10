@@ -33,9 +33,14 @@ foreach ($xml->url as $url_list) {
             if ($url == $result->getUrl()) {
                 echo "<li>Es la mateixa Indexada!!!!</li>";
                 $pagina["url"] = $url;
+                $pagina["google_index"] = '1';
                 $pagina_indexada = new Indexeds(null, $pagina);
                 $pagina_indexada->insertIntoDataBase();
             } else {
+                $pagina["url"] = $url;
+                $pagina["google_index"] = '0';
+                $pagina_indexada = new Indexeds(null, $pagina);
+                $pagina_indexada->insertIntoDataBase();
                 echo "<li>No indexada</li>";
             }
             echo "</ul>";
@@ -43,10 +48,10 @@ foreach ($xml->url as $url_list) {
             sleep(10);
             ini_set('max_execution_time', 30);
             $i++;
-            //if ($i == 5) exit ();
+            if ($i == 25) exit ();
         }
     }else{
-        echo "<ul><li>".$url." -> INDEXADA</li></ul>";
+        echo "<ul><li>".$url." -> Ja analitzada</li></ul>";
     }
 }
 ?>
