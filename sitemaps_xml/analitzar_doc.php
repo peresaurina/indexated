@@ -57,7 +57,7 @@ foreach ($xml->url as $url_list) {
             echo "</ul>";
             $i++;
             sleep(10);
-            if ($i == 25)
+            if ($i == 5)
                 exit();
         }
     }else {
