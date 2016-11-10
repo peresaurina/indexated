@@ -19,19 +19,9 @@ foreach ($xml->url as $url_list) {
         $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
                 ->setNumberResults(10);                        // 5 results per page
         $googleUrl->setNumberResults(1);
-        //echo "<br><br>";
-        //print_r($googleUrl);
-
         $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
-        //echo "<br><br>";
-        //print_r($simpsonPage1);
         // GET NATURAL RESULTS
         $positions = $simpsonPage1->getPositions();
-
-        //echo "<br><br>";
-        //print_r($positions);
-
-        
 
         foreach ($positions as $result) {
 
@@ -65,7 +55,7 @@ foreach ($xml->url as $url_list) {
             //  exit();
         }
     } else {
-        echo "<br>". $url . " -> Ja analitzada";
+        echo "-> Ja analitzada";
     }
     ini_set('max_execution_time', 30);
 }
