@@ -18,6 +18,8 @@ foreach ($xml->url as $url_list) {
         $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
                 ->setNumberResults(10);                        // 5 results per page
         $googleUrl->setNumberResults(1);
+        echo "<br><br>";
+        print_r($googleUrl);
         
         $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
         
