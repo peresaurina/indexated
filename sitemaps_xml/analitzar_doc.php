@@ -12,9 +12,9 @@ $i = 0;
 foreach ($xml->url as $url_list) {
 
     $url = utf8_encode($url_list->loc);
-    print_r($url);
+    //print_r($url);
     
-    if (!(Indexeds::existUrlDB($url))) {
+    if (Indexeds::existUrlDB($url) == '0') {
         $googleUrl = new GoogleUrl();
         $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
                 ->setNumberResults(5);                        // 10 results per page
@@ -53,8 +53,7 @@ foreach ($xml->url as $url_list) {
         }
     }else {
         echo "<ul><li>" . $url . " -> Ja analitzada</li></ul>";
-    }
-    
+    }    
     ini_set('max_execution_time', 30);
 }
 ?>
