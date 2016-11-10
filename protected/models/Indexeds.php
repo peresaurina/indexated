@@ -36,6 +36,7 @@ class Indexeds {
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
         $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
+        print_r($this);
     }
 
     //</editor-fold>

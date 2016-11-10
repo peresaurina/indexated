@@ -41,6 +41,7 @@ foreach ($xml->url as $url_list) {
                 $pagina["url"] = $url;
                 $pagina["google_index"] = '0';
                 $pagina_indexada = new Indexeds(null, $pagina);
+                print_r($pagina_indexada);
                 $pagina_indexada->insertIntoDataBase();
                 echo "<li>No indexada</li>";
             }
