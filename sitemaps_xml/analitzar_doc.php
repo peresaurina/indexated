@@ -6,18 +6,19 @@ include("../protected/models/Indexeds.php");
 include("../protected/config/main.php");
 
 $arxiu_contingut = file_get_contents("http://matcarrelage.com/1_fr_0_sitemap.xml");
+$arxiu_contingut = file_get_contents("http://matcarrelage.com/1_es_0_sitemap.xml");
 //$arxiu_contingut = file_get_contents("../sitemaps/1_fr_0_sitemap.xml");
 $xml = new SimpleXMLElement($arxiu_contingut);
-$i = 0;
+$i = 1;
 foreach ($xml->url as $url_list) {
 
     $url = utf8_encode($url_list->loc);
-    echo "<br>web : " . $url;
+    echo "<br>".$i." web : " . $url;
     
     if (Indexeds::existUrlDB($url) == '0') {
 
         $googleUrl = new GoogleUrl();
-        $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
+        $googleUrl->setLang('es') // lang allows to adapt the query (tld, and google local params)
                 ->setNumberResults(10);                        // 5 results per page
         $googleUrl->setNumberResults(1);
         $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
