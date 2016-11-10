@@ -43,8 +43,8 @@ foreach ($xml->url as $url_list) {
             if ($url == $result->getUrl()) {
                 echo "<li>Es la mateixa Indexada!!!!</li>";
                 $pagina["url"] = $url;
+                $pagina["google_url1"] = '';
                 $pagina["google_index"] = '1';
-                
                 
                 $pagina_indexada = new Indexeds(null, $pagina);
                 $pagina_indexada->insertIntoDataBase();
@@ -60,8 +60,8 @@ foreach ($xml->url as $url_list) {
             echo "</ul>";
             $i++;
             sleep(10);
-            if ($i == 5)
-                exit();
+            //if ($i == 5)
+              //  exit();
         }
     }else {
         echo "<ul><li>" . $url . " -> Ja analitzada</li></ul>";
