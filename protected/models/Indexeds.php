@@ -54,7 +54,8 @@ class Indexeds {
                 ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
                 'createdAt = NOW()';
         $result = mysql_query($query);
-        $this->id = (int) mysql_insert_id();
+        //$this->id = (int) mysql_insert_id();
+        echo "<br>";
         print_r($query);
         return $result;
     }
