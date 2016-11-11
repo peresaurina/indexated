@@ -6,7 +6,7 @@ include("../protected/models/Indexeds.php");
 include("../protected/config/main.php");
 
 $arxiu_contingut = file_get_contents("http://matcarrelage.com/1_fr_0_sitemap.xml");
-$arxiu_contingut = file_get_contents("http://matcarrelage.com/1_es_0_sitemap.xml");
+//$arxiu_contingut = file_get_contents("http://matcarrelage.com/1_es_0_sitemap.xml");
 //$arxiu_contingut = file_get_contents("../sitemaps/1_fr_0_sitemap.xml");
 $xml = new SimpleXMLElement($arxiu_contingut);
 $i = 1;
@@ -52,13 +52,14 @@ foreach ($xml->url as $url_list) {
             }
             echo "</ul>";
             $i++;
-            sleep(10);
+            sleep(30);
             //if ($i == 5)
             //  exit();
         }
     } else {
+        $i++;
         echo "-> Ja analitzada";
     }
-    ini_set('max_execution_time', 30);
+    ini_set('max_execution_time', 300);
 }
 ?>
