@@ -6,7 +6,7 @@ include("../protected/models/GoogleUrls.php");
 include("../protected/config/main.php");
 
 
-$site_url = "matcarrelage.com/fr/";
+$site_url = "http://matcarrelage.com/fr/";
 
 $googleUrl = new GoogleUrl();
 $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
