@@ -28,7 +28,7 @@ foreach ($positions as $result) {
     $pagina["url"] = $result->getUrl();
     $pagina["title"] = utf8_decode($result->getTitle());
     $pagina["google_index"] = $result->getPosition();
-    print_r($pagina);
+    //print_r($pagina);
 
     $pagina_index = new GoogleUrls(null,$pagina);
     $pagina_index->insertIntoDataBase();
