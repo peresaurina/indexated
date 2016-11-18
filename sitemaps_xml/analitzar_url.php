@@ -23,9 +23,17 @@ foreach ($positions as $result) {
     echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
     echo "<li>website : " . $result->getWebsite() . "</li>";
     echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
-    echo "<li>URL sitemap : <a href='" . $url . "'>" . $url . "</a></li>";
     echo "</ul>";
+
+    $pagina["url"] = $result->getUrl();
+    $pagina["google_index"] = $result->getPosition();
+    $pagina_index = new GoogleUrls(null,$pagina);
+    $pagina_index->insertIntoDataBase();
+
 }
+
+
+
 
 /*
             if (Indexeds::existUrlDB($url) == '0') {
