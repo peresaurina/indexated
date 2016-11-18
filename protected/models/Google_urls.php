@@ -10,7 +10,7 @@ class Google_urls {
     //<editor-fold desc="ATTRIBUTES">
     protected $id;
     protected $url;
-    protected $google_position;
+    protected $google_index;
     protected $title;
     protected $createdAt;
 
@@ -36,7 +36,7 @@ class Google_urls {
         $this->id = isset($fields["id"]) ? (int) $fields["id"] : null;
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
         $this->title = isset($fields["title"]) ? $fields["title"] : null;
-        $this->google_position = isset($fields["google_position"]) ? $fields["google_position"] : 0;
+        $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
         //print_r($this);
     }
@@ -51,7 +51,7 @@ class Google_urls {
         $query = 'INSERT INTO `Google_urls` SET ' .
                 ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
                 ($this->title != null ? 'title = "' . $this->title . '", ' : '') .                
-                ($this->google_position != null ? 'google_position = "' . $this->google_position . '", ' : '') .
+                ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
                 'createdAt = NOW()';
         $result = mysql_query($query);
         //$this->id = (int) mysql_insert_id();
@@ -107,12 +107,12 @@ class Google_urls {
     function setCreatedAt($createdAt) {
         $this->createdAt = $createdAt;
     }
-    function getGoogle_position() {
-        return $this->google_position;
+    function getGoogle_index() {
+        return $this->google_index;
     }
 
-    function setGoogle_index($google_position) {
-        $this->google_position = $google_position;
+    function setGoogle_index($google_index) {
+        $this->google_index = $google_index;
     }
     function getGoogle_url1() {
         return $this->google_url1;
