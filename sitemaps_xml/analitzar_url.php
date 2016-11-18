@@ -11,11 +11,12 @@ $num_page = 100;
 
 $googleUrl = new GoogleUrl();
 $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
-        ->setNumberResults(10);                        // 5 results per page
-$googleUrl->setNumberResults(10);
+        ->setNumberResults(10*$num_page);                        // 5 results per page
+$googleUrl->setNumberResults(10*$num_page);
 
 
-for ($page=0; $page< $num_page;$page++){
+for ($page=0; $page < $num_page;$page++){
+    echo "<br>Nova cerca num_page: ".$page."<br>";
 
     $simpsonPage1 = $googleUrl->setPage($page)->search($site_url);   
     // GET NATURAL RESULTS
@@ -37,7 +38,7 @@ for ($page=0; $page< $num_page;$page++){
 
         $pagina_index = new GoogleUrls(null,$pagina);
         $pagina_index->insertIntoDataBase();
-        unset($pagina);
+        //ini_set('max_execution_time', 300);   
     }
 }
 
