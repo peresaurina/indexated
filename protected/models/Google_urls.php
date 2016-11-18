@@ -38,7 +38,7 @@ class GoogleUrls {
         $this->title = isset($fields["title"]) ? $fields["title"] : null;
         $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
-        //print_r($this);
+        print_r($this);
     }
 
     //</editor-fold>
