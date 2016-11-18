@@ -26,10 +26,10 @@ foreach ($positions as $result) {
     echo "</ul>";
 
     $pagina["url"] = $result->getUrl();
-    $pagina["title"] = $result->getTitle();
+    $pagina["title"] = utf8_decode($result->getTitle();
     $pagina["google_index"] = $result->getPosition();
-    $pagina_index = new GoogleUrls(null,$pagina);
-    $pagina_index->insertIntoDataBase();
+    //$pagina_index = new GoogleUrls(null,$pagina);
+    //$pagina_index->insertIntoDataBase();
 
 }
 
