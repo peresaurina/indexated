@@ -11,6 +11,7 @@ class Google_urls {
     protected $id;
     protected $url;
     protected $google_position;
+    protected $title;
     protected $createdAt;
 
     function __construct($id, $fields) {
@@ -34,6 +35,7 @@ class Google_urls {
     function __constructByFields($fields) {
         $this->id = isset($fields["id"]) ? (int) $fields["id"] : null;
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
+        $this->title = isset($fields["title"]) ? $fields["title"] : null;
         $this->google_position = isset($fields["google_position"]) ? $fields["google_position"] : 0;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
         //print_r($this);
@@ -48,6 +50,7 @@ class Google_urls {
     public function insertIntoDataBase() {
         $query = 'INSERT INTO `Google_urls` SET ' .
                 ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
+                ($this->title != null ? 'title = "' . $this->title . '", ' : '') .                
                 ($this->google_position != null ? 'google_position = "' . $this->google_position . '", ' : '') .
                 'createdAt = NOW()';
         $result = mysql_query($query);
@@ -117,6 +120,13 @@ class Google_urls {
 
     function setGoogle_url1($google_url1) {
         $this->google_url1 = $google_url1;
+    }
+    function setTitle($title) {
+        $this->title = $id;
+    }
+
+    function getTitle($title) {
+        return $this->title;
     }
 
 

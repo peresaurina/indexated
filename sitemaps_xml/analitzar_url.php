@@ -2,7 +2,7 @@
 
 include ('../lib/funcions_generals.php');
 include("../google-url-master/autoload.php");
-include("../protected/models/Indexeds.php");
+include("../protected/models/GoogleUrls.php");
 include("../protected/config/main.php");
 
 
@@ -26,6 +26,7 @@ foreach ($positions as $result) {
     echo "</ul>";
 
     $pagina["url"] = $result->getUrl();
+    $pagina["title"] = $result->getTitle();
     $pagina["google_index"] = $result->getPosition();
     $pagina_index = new GoogleUrls(null,$pagina);
     $pagina_index->insertIntoDataBase();
