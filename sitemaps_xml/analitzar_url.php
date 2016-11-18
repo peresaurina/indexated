@@ -7,60 +7,39 @@ include("../protected/config/main.php");
 
 
 $site_url = "http://matcarrelage.com/fr/";
+$num_page = 100;
 
 $googleUrl = new GoogleUrl();
 $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
-        ->setNumberResults(1000);                        // 5 results per page
-$googleUrl->setNumberResults(1000);
-$simpsonPage1 = $googleUrl->setPage(0)->search($site_url); // simpsons results page 1 (results 1-20)
-// GET NATURAL RESULTS
-$positions = $simpsonPage1->getPositions();
+        ->setNumberResults(10);                        // 5 results per page
+$googleUrl->setNumberResults(10);
 
-foreach ($positions as $result) {
 
-    echo "<ul>";
-    echo "<li>position : " . $result->getPosition() . "</li>";
-    echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
-    echo "<li>website : " . $result->getWebsite() . "</li>";
-    echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
-    echo "</ul>";
-    echo "<br> ---- <br>";
-    $pagina["url"] = $result->getUrl();
-    $pagina["title"] = utf8_decode($result->getTitle());
-    $pagina["google_index"] = $result->getPosition();
-    //print_r($pagina);
+for ($page=0; $page< $num_page;$page++){
 
-    $pagina_index = new GoogleUrls(null,$pagina);
-    $pagina_index->insertIntoDataBase();
-    unset($pagina);
+    $simpsonPage1 = $googleUrl->setPage($page)->search($site_url);   
+    // GET NATURAL RESULTS
+    $positions = $simpsonPage1->getPositions();
+
+    foreach ($positions as $result) {
+
+        echo "<ul>";
+        echo "<li>position : " . $result->getPosition() . "</li>";
+        echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
+        echo "<li>website : " . $result->getWebsite() . "</li>";
+        echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
+        echo "</ul>";
+        echo "<br> ---- <br>";
+        $pagina["url"] = $result->getUrl();
+        $pagina["title"] = utf8_decode($result->getTitle());
+        $pagina["google_index"] = $result->getPosition();
+        //print_r($pagina);
+
+        $pagina_index = new GoogleUrls(null,$pagina);
+        $pagina_index->insertIntoDataBase();
+        unset($pagina);
+    }
 }
 
-
-
-
-/*
-            if (Indexeds::existUrlDB($url) == '0') {
-                if ($url == $result->getUrl()) {
-                    echo "<br>Es la mateixa Indexada";
-                    $pagina["url"] = $url;
-                    $pagina["google_url1"] = '';
-                    $pagina["google_index"] = '1';
-                    $pagina_indexada = new Indexeds(null, $pagina);
-                    $pagina_indexada->insertIntoDataBase();
-                } else {
-
-                    $pagina["url"] = $url;
-                    $pagina["google_index"] = '0';
-                    $pagina["google_url1"] = $result->getUrl();
-                    $pagina_indexada = new Indexeds(null, $pagina);
-                    //print_r($pagina_indexada);
-                    $pagina_indexada->insertIntoDataBase();
-                    echo "<br>No indexada</li>";
-                }
-                echo "</ul>";
-                $i++;
-                sleep(30);
-                //if ($i == 5)
-                */
 
 ?>
