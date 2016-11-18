@@ -10,7 +10,7 @@ $site_url = "http://matcarrelage.com/fr/";
 
 $googleUrl = new GoogleUrl();
 $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
-        ->setNumberResults(10);                        // 5 results per page
+        ->setNumberResults(1000);                        // 5 results per page
 $googleUrl->setNumberResults(1000);
 $simpsonPage1 = $googleUrl->setPage(0)->search($site_url); // simpsons results page 1 (results 1-20)
 // GET NATURAL RESULTS
