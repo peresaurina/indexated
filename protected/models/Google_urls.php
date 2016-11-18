@@ -5,7 +5,7 @@
  *
  * @peresaurina
  */
-class Google_urls {
+class GoogleUrls {
 
     //<editor-fold desc="ATTRIBUTES">
     protected $id;

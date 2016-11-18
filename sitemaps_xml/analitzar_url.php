@@ -24,12 +24,12 @@ foreach ($positions as $result) {
     echo "<li>website : " . $result->getWebsite() . "</li>";
     echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
     echo "</ul>";
-
+    echo "<br> ---- <br>";
     $pagina["url"] = $result->getUrl();
     $pagina["title"] = utf8_decode($result->getTitle());
     $pagina["google_index"] = $result->getPosition();
     $pagina_index = new GoogleUrls(null,$pagina);
-    //$pagina_index->insertIntoDataBase();
+    $pagina_index->insertIntoDataBase();
 
 }
 
