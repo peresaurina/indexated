@@ -12,6 +12,7 @@ class Indexeds {
     protected $url;
     protected $google_index;
     protected $google_url1;
+    protected $updatedAt;
     protected $createdAt;
 
     function __construct($id, $fields) {
@@ -37,6 +38,7 @@ class Indexeds {
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
         $this->google_url1 = isset($fields["google_url1"]) ? $fields["google_url1"] : null;        
         $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
+        $this->updatedAt = isset($fields["updatedAt"]) ? $fields["updatedAt"] : null;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
         //print_r($this);
     }
@@ -48,17 +50,37 @@ class Indexeds {
      * @return boolean
      */
     public function insertIntoDataBase() {
-        $query = 'INSERT INTO `indexeds` SET ' .
-                ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
-                ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
-                ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
-                'createdAt = NOW()';
-        $result = mysql_query($query);
-        //$this->id = (int) mysql_insert_id();
-        echo "<br>";
-        print_r($query);
-        return $result;
+
+        if (!existUrlDB($this->url)){
+
+            $query = 'INSERT INTO `indexeds` SET ' .
+                    ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
+                    ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
+                    ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
+                    'createdAt = NOW()';
+            $result = mysql_query($query);
+            //$this->id = (int) mysql_insert_id();
+            echo "<br>";
+            print_r($query);
+            return $result;
+
+        }else{
+            $query = 'UPDATE `indexeds` SET ' .
+                    ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
+                    ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
+                    ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
+                    'updatedAt = NOW()
+                    WHERE id = '.$this->id;
+            $result = mysql_query($query);
+            echo "<br>";
+            print_r($query);
+            return $result;
+
+        }
+
     }
+
+
 
     public function existInDB($id) {
         $query = "SELECT * FROM `indexeds` WHERE id = '" . $id . "'";
@@ -77,6 +99,18 @@ class Indexeds {
         $result = mysql_query($query);
         if (mysql_num_rows($result) > 0) {
             return "1";
+        } else {
+            return "0";
+        }
+    }
+
+    public function getUrlid($url) {
+        $query = "SELECT * FROM `indexeds` WHERE url = '" . $url . "'";
+        //echo "Claims.php : ".$query;
+        $result = mysql_query($query);
+        if (mysql_num_rows($result) > 0) {
+            $row = mysql_fetch_array($result);
+            return $row["id"];
         } else {
             return "0";
         }

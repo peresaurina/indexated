@@ -15,7 +15,8 @@ $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google loc
 $googleUrl->setNumberResults(10*$num_page);
 
 
-for ($page=0; $page < $num_page;$page++){
+for ($page = 0; $page < $num_page; $page++){
+    
     echo "<br>Nova cerca num_page: ".$page."<br>";
 
     $simpsonPage1 = $googleUrl->setPage($page)->search($site_url);   
