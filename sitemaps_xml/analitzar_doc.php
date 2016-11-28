@@ -18,9 +18,9 @@ foreach ($xml->url as $url_list) {
     
                 $googleUrl = new GoogleUrl();
                 $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
-                        ->setNumberResults(10);                        // 5 results per page
+                        ->setNumberResults(2);                        // 5 results per page
                 
-                $googleUrl->setNumberResults(10);
+                $googleUrl->setNumberResults(2);
                 
                 $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
                 
@@ -45,7 +45,7 @@ foreach ($xml->url as $url_list) {
                         $pagina["url"] = $url;
                         $pagina["google_url1"] = '';
                         $pagina["google_index"] = '1';
-                        echo "<br>";
+                        echo "<br>pagina:";
                         $print_r($pagina);
                         $pagina_indexada = new Indexeds(null, $pagina);
                         echo "<br>";
