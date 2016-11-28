@@ -27,8 +27,10 @@ foreach ($xml->url as $url_list) {
                 // GET NATURAL RESULTS
                 $positions = $simpsonPage1->getPositions();
                 
-                foreach ($positions as $result) {
-                    
+                //foreach ($positions as $result) {
+                //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
+                $result = $positions[0];
+
                     //echo "<ul>";
                     //echo "<li>position : " . $result->getPosition() . "</li>";
                     //echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
@@ -59,7 +61,7 @@ foreach ($xml->url as $url_list) {
                     echo "</ul>";
                     sleep(30);
                     
-                }
+                //}
         }else{
             $i++;
             echo "-> Ja analitzada";
