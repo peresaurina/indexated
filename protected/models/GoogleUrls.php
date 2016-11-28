@@ -48,15 +48,17 @@ class GoogleUrls {
      * @return boolean
      */
     public function insertIntoDataBase() {
+        
         $query = 'INSERT INTO `Google_urls` SET ' .
                 ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
                 ($this->title != null ? 'title = "' . $this->title . '", ' : '') .                
                 ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
                 'createdAt = NOW()';
+        print_r($query);
         $result = mysql_query($query);
         //$this->id = (int) mysql_insert_id();
         //echo "<br>".$query."<br>";
-        //print_r($query);
+        
         return $result;
     }
 
