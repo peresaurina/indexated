@@ -31,6 +31,8 @@ foreach ($xml->url as $url_list) {
                 //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
                 $result = $positions[0];
 
+                print_r($positions);
+
                     //echo "<ul>";
                     //echo "<li>position : " . $result->getPosition() . "</li>";
                     //echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
