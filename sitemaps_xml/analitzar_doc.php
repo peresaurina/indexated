@@ -46,10 +46,10 @@ foreach ($xml->url as $url_list) {
                         $pagina["google_url1"] = '';
                         $pagina["google_index"] = '1';
                         echo "<br>pagina:";
-                        $print_r($pagina);
+                        //print_r($pagina);
                         $pagina_indexada = new Indexeds(null, $pagina);
                         echo "<br>";
-                        $print_r($pagina_indexada);
+                        //print_r($pagina_indexada);
                         $pagina_indexada->insertIntoDataBase();
                     } else {
                         $pagina["url"] = $url;
