@@ -58,10 +58,13 @@ class Indexeds {
                     ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
                     ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
                     'updatedAt = NOW(),createdAt = NOW()';
+
+                    echo "<br>";
+            print_r($query);
+
             $result = mysql_query($query);
             //$this->id = (int) mysql_insert_id();
-            echo "<br>";
-            print_r($query);
+            
             return $result;
         } else {
             $query = 'UPDATE `indexeds` SET ' .
@@ -70,6 +73,8 @@ class Indexeds {
                     ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
                     'updatedAt = NOW()
                     WHERE id = ' . $this->id;
+                    echo "<br>";
+            print_r($query);
             $result = mysql_query($query);
             echo "<br>";
             print_r($query);
