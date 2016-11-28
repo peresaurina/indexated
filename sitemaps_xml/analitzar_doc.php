@@ -41,13 +41,14 @@ foreach ($xml->url as $url_list) {
                 $pagina["google_url1"] = '';
                 $pagina["google_index"] = '1';
                 $pagina_indexada = new Indexeds(null, $pagina);
+                $print_r($pagina_indexada);
                 $pagina_indexada->insertIntoDataBase();
             } else {
                 $pagina["url"] = $url;
                 $pagina["google_index"] = '0';
                 $pagina["google_url1"] = $result->getUrl();
                 $pagina_indexada = new Indexeds(null, $pagina);
-                //print_r($pagina_indexada);
+                print_r($pagina_indexada);
                 $pagina_indexada->insertIntoDataBase();
                 echo "<br>No indexada</li>";
             }
