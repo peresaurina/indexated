@@ -15,7 +15,7 @@ foreach ($xml->url as $url_list) {
     $url = utf8_encode($url_list->loc);
     echo "<br>" . $i . " web : " . $url;
 
-    if (Indexeds::existUrlDB($url) == '0') {
+    if (Indexeds::existUrlDB($url) == '0') { //existeix a la base dades
 
         $googleUrl = new GoogleUrl();
         $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
@@ -61,7 +61,7 @@ foreach ($xml->url as $url_list) {
         }
         
     } else { //pàgina ja indexada a la base de dades
-        
+        /*
         $url_id = Indexeds::getUrlid($url);
         $url_nova = new Indexeds($url_id);
         // comprovem si google_url1 ='' => significa que la url és la mateixa
@@ -99,9 +99,8 @@ foreach ($xml->url as $url_list) {
                     //  exit();
                 
             }           
-
         }
-
+*/
         $i++;
         echo "-> Ja analitzada";
     }

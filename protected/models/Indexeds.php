@@ -36,7 +36,7 @@ class Indexeds {
     function __constructByFields($fields) {
         $this->id = isset($fields["id"]) ? (int) $fields["id"] : null;
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
-        $this->google_url1 = isset($fields["google_url1"]) ? $fields["google_url1"] : null;        
+        $this->google_url1 = isset($fields["google_url1"]) ? $fields["google_url1"] : null;
         $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
         $this->updatedAt = isset($fields["updatedAt"]) ? $fields["updatedAt"] : null;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
@@ -51,7 +51,7 @@ class Indexeds {
      */
     public function insertIntoDataBase() {
 
-        if (!existUrlDB($this->url)){
+        if (!existUrlDB($this->url)) {
 
             $query = 'INSERT INTO `indexeds` SET ' .
                     ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
@@ -63,24 +63,19 @@ class Indexeds {
             echo "<br>";
             print_r($query);
             return $result;
-
-        }else{
+        } else {
             $query = 'UPDATE `indexeds` SET ' .
                     ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
                     ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
                     ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
                     'updatedAt = NOW()
-                    WHERE id = '.$this->id;
+                    WHERE id = ' . $this->id;
             $result = mysql_query($query);
             echo "<br>";
             print_r($query);
             return $result;
-
         }
-
     }
-
-
 
     public function existInDB($id) {
         $query = "SELECT * FROM `indexeds` WHERE id = '" . $id . "'";
@@ -96,10 +91,14 @@ class Indexeds {
     public function existUrlDB($url) {
         $query = "SELECT * FROM `indexeds` WHERE url = '" . $url . "'";
         //echo "Claims.php : ".$query;
-        $result = mysql_query($query);
-        if (mysql_num_rows($result) > 0) {
-            return "1";
-        } else {
+        try {
+            $result = mysql_query($query);
+            if (mysql_num_rows($result) > 0) {
+                return "1";
+            } else {
+                return "0";
+            }
+        } catch (Exception $e) {
             return "0";
         }
     }
@@ -141,6 +140,7 @@ class Indexeds {
     function setCreatedAt($createdAt) {
         $this->createdAt = $createdAt;
     }
+
     function getGoogle_index() {
         return $this->google_index;
     }
@@ -148,6 +148,7 @@ class Indexeds {
     function setGoogle_index($google_index) {
         $this->google_index = $google_index;
     }
+
     function getGoogle_url1() {
         return $this->google_url1;
     }
@@ -155,8 +156,6 @@ class Indexeds {
     function setGoogle_url1($google_url1) {
         $this->google_url1 = $google_url1;
     }
-
-
 
 }
 
