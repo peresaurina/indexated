@@ -40,6 +40,7 @@ foreach ($xml->url as $url_list) {
                 $pagina["url"] = $url;
                 $pagina["google_url1"] = '';
                 $pagina["google_index"] = '1';
+                $print_r($pagina);
                 $pagina_indexada = new Indexeds(null, $pagina);
                 $print_r($pagina_indexada);
                 $pagina_indexada->insertIntoDataBase();
