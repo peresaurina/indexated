@@ -23,13 +23,13 @@ foreach ($xml->url as $url_list) {
         echo "<br> pos 11";
         $googleUrl->setNumberResults(10);
         echo "<br> pos 12";
-        $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
+        $simpsonPage1 = $googleUrl->setPage(1)->search($url); // simpsons results page 1 (results 1-20)
         echo "<br> pos 13";
         // GET NATURAL RESULTS
         $positions = $simpsonPage1->getPositions();
-echo "<br> pos 14";
+        echo "<br> pos 14";
         foreach ($positions as $result) {
-echo "<br> pos 20";
+        echo "<br> pos 20";
             //echo "<ul>";
             //echo "<li>position : " . $result->getPosition() . "</li>";
             //echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
