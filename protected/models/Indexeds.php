@@ -52,7 +52,7 @@ class Indexeds {
      */
     public function insertIntoDataBase() {
 
-        if (!existUrlDB($this->url)) {
+       // if (!existUrlDB($this->url)) {
             echo "<br> url no existeix a la bbdd";
 
             $query = 'INSERT INTO `indexeds` SET ' .
@@ -68,6 +68,7 @@ class Indexeds {
             //$this->id = (int) mysql_insert_id();
             
             return $result;
+     /*
         } else {
             echo "<br> url EXISTEIX a la bbdd"; 
             $query = 'UPDATE `indexeds` SET ' .
@@ -83,6 +84,7 @@ class Indexeds {
             print_r($query);
             return $result;
         }
+        */
     }
 
     public function existInDB($id) {
