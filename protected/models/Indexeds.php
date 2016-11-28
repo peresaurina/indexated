@@ -39,8 +39,8 @@ class Indexeds {
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
         $this->google_url1 = isset($fields["google_url1"]) ? $fields["google_url1"] : null;
         $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
-        $this->updatedAt = isset($fields["updatedAt"]) ? $fields["updatedAt"] : null;
-        $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
+        //$this->updatedAt = isset($fields["updatedAt"]) ? $fields["updatedAt"] : null;
+        //$this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
         
     }
 
