@@ -53,7 +53,7 @@ class Indexeds {
     public function insertIntoDataBase() {
 
        // if (!existUrlDB($this->url)) {
-            echo "<br> url no existeix a la bbdd";
+            //echo "<br> url no existeix a la bbdd";
 
             $query = 'INSERT INTO `indexeds` SET ' .
                     ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
@@ -61,9 +61,7 @@ class Indexeds {
                     ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
                     'updatedAt = NOW(), createdAt = NOW()';
 
-                    echo "<br>";
-            print_r($query);
-
+            
             $result = mysql_query($query);
             //$this->id = (int) mysql_insert_id();
             
