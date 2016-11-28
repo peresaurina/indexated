@@ -22,7 +22,7 @@ foreach ($xml->url as $url_list) {
                 
                 $googleUrl->setNumberResults(10);
                 
-                $simpsonPage1 = $googleUrl->setPage(1)->search($url); // simpsons results page 1 (results 1-20)
+                $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
                 
                 // GET NATURAL RESULTS
                 $positions = $simpsonPage1->getPositions();
