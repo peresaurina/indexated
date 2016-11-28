@@ -34,14 +34,14 @@ class Indexeds {
     }
 
     function __constructByFields($fields) {
-        print_r($fields);
+
         $this->id = isset($fields["id"]) ? (int) $fields["id"] : null;
         $this->url = isset($fields["url"]) ? $fields["url"] : null;
         $this->google_url1 = isset($fields["google_url1"]) ? $fields["google_url1"] : null;
         $this->google_index = isset($fields["google_index"]) ? $fields["google_index"] : 0;
         $this->updatedAt = isset($fields["updatedAt"]) ? $fields["updatedAt"] : null;
         $this->createdAt = isset($fields["createdAt"]) ? $fields["createdAt"] : null;
-        print_r($this);
+        
     }
 
     //</editor-fold>
@@ -53,12 +53,13 @@ class Indexeds {
     public function insertIntoDataBase() {
 
         if (!existUrlDB($this->url)) {
+            echo "<br> url no existeix a la bbdd";
 
             $query = 'INSERT INTO `indexeds` SET ' .
                     ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
                     ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
                     ($this->google_url1 != null ? 'google_url1 = "' . $this->google_url1 . '", ' : '') .
-                    'updatedAt = NOW(),createdAt = NOW()';
+                    'updatedAt = NOW(), createdAt = NOW()';
 
                     echo "<br>";
             print_r($query);
@@ -68,6 +69,7 @@ class Indexeds {
             
             return $result;
         } else {
+            echo "<br> url EXISTEIX a la bbdd"; 
             $query = 'UPDATE `indexeds` SET ' .
                     ($this->url != null ? 'url = "' . $this->url . '", ' : '') .
                     ($this->google_index != null ? 'google_index = "' . $this->google_index . '", ' : '') .
