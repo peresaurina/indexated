@@ -18,9 +18,9 @@ foreach ($xml->url as $url_list) {
     
                 $googleUrl = new GoogleUrl();
                 $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
-                        ->setNumberResults(2);                        // 5 results per page
+                        ->setNumberResults(1);                        // 5 results per page
                 
-                $googleUrl->setNumberResults(2);
+                $googleUrl->setNumberResults(1);
                 
                 $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
                 
@@ -31,7 +31,7 @@ foreach ($xml->url as $url_list) {
                 //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
                 $result = $positions[0];
 
-                print_r($positions);
+                //print_r($positions);
 
                     //echo "<ul>";
                     //echo "<li>position : " . $result->getPosition() . "</li>";
@@ -56,7 +56,7 @@ foreach ($xml->url as $url_list) {
                         $pagina["google_index"] = '0';
                         $pagina["google_url1"] = $result->getUrl();
                         $pagina_indexada = new Indexeds(null, $pagina);
-                        print_r($pagina_indexada);
+                        //print_r($pagina_indexada);
                         $pagina_indexada->insertIntoDataBase();
                         echo "<br>No indexada</li>";
                     }
