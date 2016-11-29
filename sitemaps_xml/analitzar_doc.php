@@ -23,7 +23,8 @@ foreach ($xml->url as $url_list) {
             $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)            
             // GET NATURAL RESULTS
             $positions = $simpsonPage1->getPositions();            
-            print_r($positions);
+            //print_r($positions);
+            try{
             //foreach ($positions as $result) {
             //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
             $result = $positions[0];
@@ -49,7 +50,10 @@ foreach ($xml->url as $url_list) {
                 $pagina_indexada = new Indexeds(null, $pagina);
                 $pagina_indexada->insertIntoDataBase();                
             }            
-            sleep(30);                
+            sleep(30);         
+            }catch (Exception $e){
+                echo "  -> Saltem URL";
+            }       
     }else{
         $i++;
         echo " -> Ja analitzada";
