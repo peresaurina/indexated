@@ -73,8 +73,8 @@ class GoogleUrl{
 
     protected $googleParams;
     
-    //protected $userAgent = "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36";
-    protected $userAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)";
+    protected $userAgent = "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36";
+    //protected $userAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)";
 
     protected $enableLr = true;
 

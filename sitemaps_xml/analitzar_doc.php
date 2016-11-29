@@ -16,7 +16,6 @@ foreach ($xml->url as $url_list) {
 
     if (Indexeds::existUrlDB($url) == '0') {
             echo " - url no existeix en bbdd";
-
             $googleUrl = new GoogleUrl();
             $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
                     ->setNumberResults(2);                        // 5 results per page            
@@ -24,6 +23,7 @@ foreach ($xml->url as $url_list) {
             $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)            
             // GET NATURAL RESULTS
             $positions = $simpsonPage1->getPositions();            
+            print_r($positions);
             //foreach ($positions as $result) {
             //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
             $result = $positions[0];
