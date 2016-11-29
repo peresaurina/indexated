@@ -33,7 +33,7 @@ foreach ($xml->url as $url_list) {
                 //echo "<li>website : " . $result->getWebsite() . "</li>";
                 //echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
                 //echo "<li>URL sitemap : <a href='" . $url . "'>" . $url . "</a></li>";
-                if (isset($result->getUrl()){
+                if (isset($result)&&(!is_null($result){
 
                     if ($url == $result->getUrl()) {
                         echo "<br>Es la mateixa Indexada";
@@ -51,7 +51,7 @@ foreach ($xml->url as $url_list) {
                         $pagina_indexada->insertIntoDataBase();                
                     }  
                     sleep(30);  
-                     
+
                 }else{
                     echo "-> No result on Google";
                 }      
