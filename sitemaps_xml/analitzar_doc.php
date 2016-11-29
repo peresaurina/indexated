@@ -50,15 +50,13 @@ foreach ($xml->url as $url_list) {
                         $pagina_indexada = new Indexeds(null, $pagina);
                         $pagina_indexada->insertIntoDataBase();                
                     }  
-                    sleep(30);  
-
                 }else{
                     echo "-> No result on Google";
                 }      
-
             }catch (Exception $e){
                 echo "  -> Saltem URL";
-            }       
+            }  
+            sleep(30);       
     }else{
         $i++;
         echo " -> Ja analitzada";
