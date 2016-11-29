@@ -15,6 +15,7 @@ foreach ($xml->url as $url_list) {
     echo "<br>" . $i . " web : " . $url;
 
     if (Indexeds::existUrlDB($url) == '0') {
+            echo " - url no existeix en bbdd";
 
             $googleUrl = new GoogleUrl();
             $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
@@ -22,15 +23,12 @@ foreach ($xml->url as $url_list) {
             
             $googleUrl->setNumberResults(2);
             
-            $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
-            
+            $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)            
             // GET NATURAL RESULTS
-            $positions = $simpsonPage1->getPositions();
-            
+            $positions = $simpsonPage1->getPositions();            
             //foreach ($positions as $result) {
             //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
             $result = $positions[0];
-
             //echo "<ul>";
             //echo "<li>position : " . $result->getPosition() . "</li>";
             //echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
@@ -43,28 +41,21 @@ foreach ($xml->url as $url_list) {
                 $pagina["url"] = $url;
                 $pagina["google_url1"] = '';
                 $pagina["google_index"] = '1';
-                echo "<br>pagina:";
-                //print_r($pagina);
                 $pagina_indexada = new Indexeds(null, $pagina);
-                echo "<br>";
-                //print_r($pagina_indexada);
                 $pagina_indexada->insertIntoDataBase();
             } else {
-                print_r($result);
+                echo "<br>No indexada";
                 $pagina["url"] = $url;
                 $pagina["google_index"] = '0';
                 $pagina["google_url1"] = $result->getUrl();
                 $pagina_indexada = new Indexeds(null, $pagina);
-                //print_r($pagina_indexada);
-                $pagina_indexada->insertIntoDataBase();
-                echo "<br>No indexada</li>";
-            }
-            echo "</ul>";
+                $pagina_indexada->insertIntoDataBase();                
+            }            
             sleep(30);                
-        }else{
-            $i++;
-            echo " -> Ja analitzada";
-        }
+    }else{
+        $i++;
+        echo " -> Ja analitzada";
+    }
     ini_set('max_execution_time', 300);
 }
 ?>
