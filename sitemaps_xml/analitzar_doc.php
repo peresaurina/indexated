@@ -22,35 +22,38 @@ foreach ($xml->url as $url_list) {
             $googleUrl->setNumberResults(2);            
             $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)            
             // GET NATURAL RESULTS
-            $positions = $simpsonPage1->getPositions();            
+            $positions = $simpsonPage1->getPositions();     
+            echo "<br>pre try";
             //print_r($positions);
             try{
-            //foreach ($positions as $result) {
-            //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
-            $result = $positions[0];
-            //echo "<ul>";
-            //echo "<li>position : " . $result->getPosition() . "</li>";
-            //echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
-            //echo "<li>website : " . $result->getWebsite() . "</li>";
-            //echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
-            //echo "<li>URL sitemap : <a href='" . $url . "'>" . $url . "</a></li>";
+                echo "<br>entrem al try";
+                //foreach ($positions as $result) {
+                //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
+                $result = $positions[0];
+                //echo "<ul>";
+                //echo "<li>position : " . $result->getPosition() . "</li>";
+                //echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
+                //echo "<li>website : " . $result->getWebsite() . "</li>";
+                //echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
+                //echo "<li>URL sitemap : <a href='" . $url . "'>" . $url . "</a></li>";
 
-            if ($url == $result->getUrl()) {
-                echo "<br>Es la mateixa Indexada";
-                $pagina["url"] = $url;
-                $pagina["google_url1"] = '';
-                $pagina["google_index"] = '1';
-                $pagina_indexada = new Indexeds(null, $pagina);
-                $pagina_indexada->insertIntoDataBase();
-            } else {
-                echo "<br>No indexada";
-                $pagina["url"] = $url;
-                $pagina["google_index"] = '0';
-                $pagina["google_url1"] = $result->getUrl();
-                $pagina_indexada = new Indexeds(null, $pagina);
-                $pagina_indexada->insertIntoDataBase();                
-            }            
-            sleep(30);         
+                if ($url == $result->getUrl()) {
+                    echo "<br>Es la mateixa Indexada";
+                    $pagina["url"] = $url;
+                    $pagina["google_url1"] = '';
+                    $pagina["google_index"] = '1';
+                    $pagina_indexada = new Indexeds(null, $pagina);
+                    $pagina_indexada->insertIntoDataBase();
+                } else {
+                    echo "<br>No indexada";
+                    $pagina["url"] = $url;
+                    $pagina["google_index"] = '0';
+                    $pagina["google_url1"] = $result->getUrl();
+                    $pagina_indexada = new Indexeds(null, $pagina);
+                    $pagina_indexada->insertIntoDataBase();                
+                }  
+                sleep(30);         
+
             }catch (Exception $e){
                 echo "  -> Saltem URL";
             }       
