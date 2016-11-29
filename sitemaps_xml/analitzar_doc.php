@@ -14,59 +14,56 @@ foreach ($xml->url as $url_list) {
     $url = utf8_encode($url_list->loc);
     echo "<br>" . $i . " web : " . $url;
 
-        if (Indexeds::existUrlDB($url) == '0') {
-    
-                $googleUrl = new GoogleUrl();
-                $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
-                        ->setNumberResults(1);                        // 5 results per page
-                
-                $googleUrl->setNumberResults(1);
-                
-                $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
-                
-                // GET NATURAL RESULTS
-                $positions = $simpsonPage1->getPositions();
-                
-                //foreach ($positions as $result) {
-                //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
-                $result = $positions[0];
+    if (Indexeds::existUrlDB($url) == '0') {
 
-                //print_r($positions);
+            $googleUrl = new GoogleUrl();
+            $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
+                    ->setNumberResults(2);                        // 5 results per page
+            
+            $googleUrl->setNumberResults(2);
+            
+            $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)
+            
+            // GET NATURAL RESULTS
+            $positions = $simpsonPage1->getPositions();
+            
+            //foreach ($positions as $result) {
+            //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
+            $result = $positions[0];
 
-                    //echo "<ul>";
-                    //echo "<li>position : " . $result->getPosition() . "</li>";
-                    //echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
-                    //echo "<li>website : " . $result->getWebsite() . "</li>";
-                    //echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
-                    //echo "<li>URL sitemap : <a href='" . $url . "'>" . $url . "</a></li>";
+            //echo "<ul>";
+            //echo "<li>position : " . $result->getPosition() . "</li>";
+            //echo "<li>title : " . utf8_decode($result->getTitle()) . "</li>";
+            //echo "<li>website : " . $result->getWebsite() . "</li>";
+            //echo "<li>URL google : <a href='" . $result->getUrl() . "'>" . $result->getUrl() . "</a></li>";
+            //echo "<li>URL sitemap : <a href='" . $url . "'>" . $url . "</a></li>";
 
-                    if ($url == $result->getUrl()) {
-                        echo "<br>Es la mateixa Indexada";
-                        $pagina["url"] = $url;
-                        $pagina["google_url1"] = '';
-                        $pagina["google_index"] = '1';
-                        echo "<br>pagina:";
-                        //print_r($pagina);
-                        $pagina_indexada = new Indexeds(null, $pagina);
-                        echo "<br>";
-                        //print_r($pagina_indexada);
-                        $pagina_indexada->insertIntoDataBase();
-                    } else {
-                        $pagina["url"] = $url;
-                        $pagina["google_index"] = '0';
-                        $pagina["google_url1"] = $result->getUrl();
-                        $pagina_indexada = new Indexeds(null, $pagina);
-                        //print_r($pagina_indexada);
-                        $pagina_indexada->insertIntoDataBase();
-                        echo "<br>No indexada</li>";
-                    }
-                    echo "</ul>";
-                    sleep(30);
-                    
-                //}
+            if ($url == $result->getUrl()) {
+                echo "<br>Es la mateixa Indexada";
+                $pagina["url"] = $url;
+                $pagina["google_url1"] = '';
+                $pagina["google_index"] = '1';
+                echo "<br>pagina:";
+                //print_r($pagina);
+                $pagina_indexada = new Indexeds(null, $pagina);
+                echo "<br>";
+                //print_r($pagina_indexada);
+                $pagina_indexada->insertIntoDataBase();
+            } else {
+                print_r($result);
+                $pagina["url"] = $url;
+                $pagina["google_index"] = '0';
+                $pagina["google_url1"] = $result->getUrl();
+                $pagina_indexada = new Indexeds(null, $pagina);
+                //print_r($pagina_indexada);
+                $pagina_indexada->insertIntoDataBase();
+                echo "<br>No indexada</li>";
+            }
+            echo "</ul>";
+            sleep(30);                
         }else{
             $i++;
-            echo "-> Ja analitzada";
+            echo " -> Ja analitzada";
         }
     ini_set('max_execution_time', 300);
 }
