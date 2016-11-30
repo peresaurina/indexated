@@ -10,6 +10,7 @@ $arxiu_contingut = file_get_contents("http://matcarrelage.com/1_fr_0_sitemap.xml
 //$arxiu_contingut = file_get_contents("../sitemaps/1_fr_0_sitemap.xml");
 $xml = new SimpleXMLElement($arxiu_contingut);
 $i = 1;
+$igoogle = 0 ;
 foreach ($xml->url as $url_list) {
     $url = utf8_encode($url_list->loc);
     echo "<br>" . $i . " web : " . $url;
@@ -22,7 +23,8 @@ foreach ($xml->url as $url_list) {
             $googleUrl->setNumberResults(2);            
             $simpsonPage1 = $googleUrl->setPage(0)->search($url); // simpsons results page 1 (results 1-20)            
             // GET NATURAL RESULTS
-            $positions = $simpsonPage1->getPositions();     
+            $positions = $simpsonPage1->getPositions(); 
+            $igoogle++;    
             try{
                 //foreach ($positions as $result) {
                 //entrem aquí les N vegades del foreach....i només hi hem d'entrar un cop!
@@ -56,6 +58,7 @@ foreach ($xml->url as $url_list) {
             }catch (Exception $e){
                 echo "  -> Saltem URL";
             }  
+            if ($igoogle == 5) break();
             sleep(30);       
     }else{
         $i++;
