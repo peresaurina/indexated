@@ -54,13 +54,19 @@ foreach ($xml->url as $url_list) {
                         $pagina_indexada = new Indexeds(null, $pagina);
                         $pagina_indexada->insertIntoDataBase();                
                     }  
+
                 }else{
+                    //error no tenim resultat de Google
+                    $pagina["url"] = $url;
+                    $pagina["google_index"] = '0';
+                    $pagina["google_url1"] = '';
+                    $pagina_indexada = new Indexeds(null, $pagina);
+                    $pagina_indexada->insertIntoDataBase(); 
                     echo "-> No result on Google";
                 }      
             }catch (Exception $e){
                 echo "  -> Saltem URL";
-            }  
-
+            }
             sleep(30);       
     }else{
         $i++;
