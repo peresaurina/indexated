@@ -17,7 +17,7 @@ foreach ($xml->url as $url_list) {
 
     if (Indexeds::existUrlDB($url) == '0') {
             $igoogle++;    
-            if ($igoogle > 5) die();
+            if ($igoogle > 50) die();
             echo " - url no existeix en bbdd";
             $googleUrl = new GoogleUrl();
             $googleUrl->setLang('fr') // lang allows to adapt the query (tld, and google local params)
